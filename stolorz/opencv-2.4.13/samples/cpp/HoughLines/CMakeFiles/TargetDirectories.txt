@@ -1,0 +1,1 @@
+/Users/kieran/Downloads/opencv-2.4.13/samples/cpp/HoughLines/CMakeFiles/HoughLines.dir
