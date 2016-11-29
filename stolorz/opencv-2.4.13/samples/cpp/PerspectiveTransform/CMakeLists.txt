@@ -1,0 +1,5 @@
+cmake_minimum_required( VERSION 2.8 )
+project( PerspectiveTransform )
+find_package( OpenCV REQUIRED )
+add_executable( PerspectiveTransform ../houghlines.cpp )
+target_link_libraries( PerspectiveTransform ${OpenCV_LIBS} )

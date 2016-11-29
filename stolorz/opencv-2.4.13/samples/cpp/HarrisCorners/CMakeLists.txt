@@ -1,0 +1,5 @@
+cmake_minimum_required( VERSION 2.8 )
+project( HarrisCorners )
+find_package( OpenCV REQUIRED )
+add_executable( HarrisCorners harriscorners.cpp )
+target_link_libraries( HarrisCorners ${OpenCV_LIBS} )

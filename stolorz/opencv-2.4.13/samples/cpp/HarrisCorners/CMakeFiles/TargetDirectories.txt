@@ -1,0 +1,1 @@
+/Users/kieran/git/cv_highlevel/stolorz/opencv-2.4.13/samples/cpp/HarrisCorners/CMakeFiles/HarrisCorners.dir
