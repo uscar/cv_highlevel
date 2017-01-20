@@ -8,10 +8,13 @@
 using namespace std;
 using namespace cv;
  
-int main( )
+int main( int argc, char** argv)
 {
+
+    const char* filename = argc >= 2 ? argv[1] : "lena.png";
+
     Mat image;
-    image = imread("lena.jpg", CV_LOAD_IMAGE_COLOR);  
+    image = imread(filename, CV_LOAD_IMAGE_COLOR);  
     namedWindow( "window1", 1 );   imshow( "window1", image );
  
     // Load Face cascade (.xml file)
