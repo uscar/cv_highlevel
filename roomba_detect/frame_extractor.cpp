@@ -4,6 +4,7 @@
 #include <sstream>
 #include "opencv2/opencv.hpp"
 
+#define FRAME_STEP 50
 
 /*
 This functions opens a video file and extracts the frames and put them into a std::vector of Mat(its the class for representing an img)
@@ -22,7 +23,7 @@ void extract_frames(const std::string &videoFilePath, std::vector<cv::Mat> &fram
 		std::cout << "Running for " << cap.get(CV_CAP_PROP_FRAME_COUNT) << " frames." << std::endl;
 		for(int frameNum = 0; frameNum < cap.get(CV_CAP_PROP_FRAME_COUNT);frameNum++)
 		{
-			if (frameNum % 50 == 0) {
+			if (frameNum % FRAME_STEP == 0) {
 				cv::Mat frame;
 				cap >> frame; // get the next frame from video
 				frames.push_back(frame);				
