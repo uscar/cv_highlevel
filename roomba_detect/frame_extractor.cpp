@@ -4,7 +4,8 @@
 #include <sstream>
 #include "opencv2/opencv.hpp"
 
-#define FRAME_STEP 50
+#define FRAME_STEP 5
+#define FRAME_NUM_START 130
 
 /*
 This functions opens a video file and extracts the frames and put them into a std::vector of Mat(its the class for representing an img)
@@ -46,7 +47,7 @@ void save_frames(std::vector<cv::Mat>& frames, const std::string& outputDir)
 	compression_params.push_back(CV_IMWRITE_JPEG_QUALITY);
 	compression_params.push_back(100);
 
-	int frameNumber=0;
+	int frameNumber = FRAME_NUM_START;
 	for (std::vector<cv::Mat>::iterator frame = frames.begin(); frame != frames.end(); ++frame)
 	{
 		std::stringstream ss;
@@ -61,7 +62,7 @@ void save_frames(std::vector<cv::Mat>& frames, const std::string& outputDir)
 int main(int argc, char** argv)
 {
 	std::vector<cv::Mat> frames;
-	extract_frames("input.MOV", frames);
+	extract_frames("negative_2.mov", frames);
 	save_frames(frames, "output/img");
     return 0;
 }
