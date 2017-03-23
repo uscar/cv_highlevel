@@ -17,6 +17,10 @@ stdio.h
 -
 stdlib.h
 -
+vector
+-
+math.h
+-
 
 /usr/local/include/opencv2/core/core.hpp
 opencv2/core/types_c.h
