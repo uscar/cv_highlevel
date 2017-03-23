@@ -1,0 +1,5 @@
+cmake_minimum_required( VERSION 2.8 )
+project( Frame_Extractor )
+find_package( OpenCV REQUIRED )
+add_executable( frame_extractor frame_extractor.cpp )
+target_link_libraries( frame_extractor ${OpenCV_LIBS} )
