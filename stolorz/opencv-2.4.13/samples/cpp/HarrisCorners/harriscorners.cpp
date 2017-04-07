@@ -11,9 +11,8 @@ using namespace std;
 
 // Global variables
 Mat src, src_gray;
-int thresh = 120;
-int max_thresh = 235;
-vector<Point> trueCorners;
+int thresh = 100;
+int max_thresh = 255;
 
 char* source_window = "Source image";
 char* corners_window = "Corners detected";
@@ -42,16 +41,10 @@ the true "single" corner between them.
 */
 
 void avgCorners(vector<Point> v){
-  //printf("in this thang\n");
-  vector< vector < Point > > clusters;
-  for (int i = 0; i < v.size()-1; i++){
-    double d = distance(v[i], v[i+1]);
-    //printf("distance from (%d,%d) to (%d,%d) is %f\n", v[i].x, v[i].y, v[i+1].x, v[i+1].y,distance(v[i], v[i+1]));
+  printf("in this thang\n");
+  for (int i = 0; i < v.size(); i++){
+    printf("distance from (%d,%d) to (%d,%d) is %f\n", v[i].x, v[i].y, v[i+1].x, v[i+1].y,distance(v[i], v[i+1]));
   }
-}
-
-void findNearestCorner(double x, double y){
-  //for (int i = 0 )
 }
 
 
@@ -68,7 +61,7 @@ int main( int argc, char** argv )
   cvtColor( src, src_gray, CV_BGR2GRAY );
 
 
-  //change contrast of the photo to correct for glare
+  //change contrast of the photo
    Mat new_image = Mat::zeros( src.size(), src.type() );
 
 
@@ -97,6 +90,7 @@ int main( int argc, char** argv )
   return(0);
 }
 
+/** @function cornerHarris_demo */
 void cornerHarris_demo( int, void* )
 {
 
