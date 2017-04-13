@@ -26,19 +26,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /usr/local/Cellar/cmake/3.2.2/bin/cmake
+CMAKE_COMMAND = /usr/bin/cmake
 
 # The command to remove a file.
-RM = /usr/local/Cellar/cmake/3.2.2/bin/cmake -E remove -f
+RM = /usr/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/kieran/git/cv_highlevel/stolorz/opencv-2.4.13/samples/cpp/HarrisCorners
+CMAKE_SOURCE_DIR = /home/other/Desktop/open/cv_highlevel/stolorz/opencv-2.4.13/samples/cpp/HarrisCorners
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/kieran/git/cv_highlevel/stolorz/opencv-2.4.13/samples/cpp/HarrisCorners
+CMAKE_BINARY_DIR = /home/other/Desktop/open/cv_highlevel/stolorz/opencv-2.4.13/samples/cpp/HarrisCorners
 
 # Include any dependencies generated for this target.
 include CMakeFiles/HarrisCorners.dir/depend.make
@@ -51,17 +51,17 @@ include CMakeFiles/HarrisCorners.dir/flags.make
 
 CMakeFiles/HarrisCorners.dir/harriscorners.cpp.o: CMakeFiles/HarrisCorners.dir/flags.make
 CMakeFiles/HarrisCorners.dir/harriscorners.cpp.o: harriscorners.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /Users/kieran/git/cv_highlevel/stolorz/opencv-2.4.13/samples/cpp/HarrisCorners/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/other/Desktop/open/cv_highlevel/stolorz/opencv-2.4.13/samples/cpp/HarrisCorners/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/HarrisCorners.dir/harriscorners.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/HarrisCorners.dir/harriscorners.cpp.o -c /Users/kieran/git/cv_highlevel/stolorz/opencv-2.4.13/samples/cpp/HarrisCorners/harriscorners.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/HarrisCorners.dir/harriscorners.cpp.o -c /home/other/Desktop/open/cv_highlevel/stolorz/opencv-2.4.13/samples/cpp/HarrisCorners/harriscorners.cpp
 
 CMakeFiles/HarrisCorners.dir/harriscorners.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/HarrisCorners.dir/harriscorners.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /Users/kieran/git/cv_highlevel/stolorz/opencv-2.4.13/samples/cpp/HarrisCorners/harriscorners.cpp > CMakeFiles/HarrisCorners.dir/harriscorners.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/other/Desktop/open/cv_highlevel/stolorz/opencv-2.4.13/samples/cpp/HarrisCorners/harriscorners.cpp > CMakeFiles/HarrisCorners.dir/harriscorners.cpp.i
 
 CMakeFiles/HarrisCorners.dir/harriscorners.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/HarrisCorners.dir/harriscorners.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /Users/kieran/git/cv_highlevel/stolorz/opencv-2.4.13/samples/cpp/HarrisCorners/harriscorners.cpp -o CMakeFiles/HarrisCorners.dir/harriscorners.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/other/Desktop/open/cv_highlevel/stolorz/opencv-2.4.13/samples/cpp/HarrisCorners/harriscorners.cpp -o CMakeFiles/HarrisCorners.dir/harriscorners.cpp.s
 
 CMakeFiles/HarrisCorners.dir/harriscorners.cpp.o.requires:
 .PHONY : CMakeFiles/HarrisCorners.dir/harriscorners.cpp.o.requires
@@ -81,25 +81,25 @@ HarrisCorners_EXTERNAL_OBJECTS =
 
 HarrisCorners: CMakeFiles/HarrisCorners.dir/harriscorners.cpp.o
 HarrisCorners: CMakeFiles/HarrisCorners.dir/build.make
-HarrisCorners: /usr/local/lib/libopencv_videostab.2.4.13.dylib
+HarrisCorners: /usr/local/lib/libopencv_videostab.so.2.4.13
 HarrisCorners: /usr/local/lib/libopencv_ts.a
-HarrisCorners: /usr/local/lib/libopencv_superres.2.4.13.dylib
-HarrisCorners: /usr/local/lib/libopencv_stitching.2.4.13.dylib
-HarrisCorners: /usr/local/lib/libopencv_contrib.2.4.13.dylib
-HarrisCorners: /usr/local/lib/libopencv_nonfree.2.4.13.dylib
-HarrisCorners: /usr/local/lib/libopencv_ocl.2.4.13.dylib
-HarrisCorners: /usr/local/lib/libopencv_gpu.2.4.13.dylib
-HarrisCorners: /usr/local/lib/libopencv_photo.2.4.13.dylib
-HarrisCorners: /usr/local/lib/libopencv_objdetect.2.4.13.dylib
-HarrisCorners: /usr/local/lib/libopencv_legacy.2.4.13.dylib
-HarrisCorners: /usr/local/lib/libopencv_video.2.4.13.dylib
-HarrisCorners: /usr/local/lib/libopencv_ml.2.4.13.dylib
-HarrisCorners: /usr/local/lib/libopencv_calib3d.2.4.13.dylib
-HarrisCorners: /usr/local/lib/libopencv_features2d.2.4.13.dylib
-HarrisCorners: /usr/local/lib/libopencv_highgui.2.4.13.dylib
-HarrisCorners: /usr/local/lib/libopencv_imgproc.2.4.13.dylib
-HarrisCorners: /usr/local/lib/libopencv_flann.2.4.13.dylib
-HarrisCorners: /usr/local/lib/libopencv_core.2.4.13.dylib
+HarrisCorners: /usr/local/lib/libopencv_superres.so.2.4.13
+HarrisCorners: /usr/local/lib/libopencv_stitching.so.2.4.13
+HarrisCorners: /usr/local/lib/libopencv_contrib.so.2.4.13
+HarrisCorners: /usr/local/lib/libopencv_nonfree.so.2.4.13
+HarrisCorners: /usr/local/lib/libopencv_ocl.so.2.4.13
+HarrisCorners: /usr/local/lib/libopencv_gpu.so.2.4.13
+HarrisCorners: /usr/local/lib/libopencv_photo.so.2.4.13
+HarrisCorners: /usr/local/lib/libopencv_objdetect.so.2.4.13
+HarrisCorners: /usr/local/lib/libopencv_legacy.so.2.4.13
+HarrisCorners: /usr/local/lib/libopencv_video.so.2.4.13
+HarrisCorners: /usr/local/lib/libopencv_ml.so.2.4.13
+HarrisCorners: /usr/local/lib/libopencv_calib3d.so.2.4.13
+HarrisCorners: /usr/local/lib/libopencv_features2d.so.2.4.13
+HarrisCorners: /usr/local/lib/libopencv_highgui.so.2.4.13
+HarrisCorners: /usr/local/lib/libopencv_imgproc.so.2.4.13
+HarrisCorners: /usr/local/lib/libopencv_flann.so.2.4.13
+HarrisCorners: /usr/local/lib/libopencv_core.so.2.4.13
 HarrisCorners: CMakeFiles/HarrisCorners.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable HarrisCorners"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/HarrisCorners.dir/link.txt --verbose=$(VERBOSE)
@@ -116,6 +116,6 @@ CMakeFiles/HarrisCorners.dir/clean:
 .PHONY : CMakeFiles/HarrisCorners.dir/clean
 
 CMakeFiles/HarrisCorners.dir/depend:
-	cd /Users/kieran/git/cv_highlevel/stolorz/opencv-2.4.13/samples/cpp/HarrisCorners && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/kieran/git/cv_highlevel/stolorz/opencv-2.4.13/samples/cpp/HarrisCorners /Users/kieran/git/cv_highlevel/stolorz/opencv-2.4.13/samples/cpp/HarrisCorners /Users/kieran/git/cv_highlevel/stolorz/opencv-2.4.13/samples/cpp/HarrisCorners /Users/kieran/git/cv_highlevel/stolorz/opencv-2.4.13/samples/cpp/HarrisCorners /Users/kieran/git/cv_highlevel/stolorz/opencv-2.4.13/samples/cpp/HarrisCorners/CMakeFiles/HarrisCorners.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/other/Desktop/open/cv_highlevel/stolorz/opencv-2.4.13/samples/cpp/HarrisCorners && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/other/Desktop/open/cv_highlevel/stolorz/opencv-2.4.13/samples/cpp/HarrisCorners /home/other/Desktop/open/cv_highlevel/stolorz/opencv-2.4.13/samples/cpp/HarrisCorners /home/other/Desktop/open/cv_highlevel/stolorz/opencv-2.4.13/samples/cpp/HarrisCorners /home/other/Desktop/open/cv_highlevel/stolorz/opencv-2.4.13/samples/cpp/HarrisCorners /home/other/Desktop/open/cv_highlevel/stolorz/opencv-2.4.13/samples/cpp/HarrisCorners/CMakeFiles/HarrisCorners.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/HarrisCorners.dir/depend
 

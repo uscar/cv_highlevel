@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/kieran/git/cv_highlevel/stolorz/opencv-2.4.13/samples/cpp/HarrisCorners/harriscorners.cpp" "/Users/kieran/git/cv_highlevel/stolorz/opencv-2.4.13/samples/cpp/HarrisCorners/CMakeFiles/HarrisCorners.dir/harriscorners.cpp.o"
+  "/home/other/Desktop/open/cv_highlevel/stolorz/opencv-2.4.13/samples/cpp/HarrisCorners/harriscorners.cpp" "/home/other/Desktop/open/cv_highlevel/stolorz/opencv-2.4.13/samples/cpp/HarrisCorners/CMakeFiles/HarrisCorners.dir/harriscorners.cpp.o"
   )
-set(CMAKE_CXX_COMPILER_ID "Clang")
+set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES

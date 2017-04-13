@@ -6,11 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/Users/kieran/git/cv_highlevel/stolorz/opencv-2.4.13/samples/cpp/HarrisCorners/harriscorners.cpp
+/home/other/Desktop/open/cv_highlevel/stolorz/opencv-2.4.13/samples/cpp/HarrisCorners/harriscorners.cpp
 opencv2/highgui/highgui.hpp
-/Users/kieran/git/cv_highlevel/stolorz/opencv-2.4.13/samples/cpp/HarrisCorners/opencv2/highgui/highgui.hpp
+/home/other/Desktop/open/cv_highlevel/stolorz/opencv-2.4.13/samples/cpp/HarrisCorners/opencv2/highgui/highgui.hpp
 opencv2/imgproc/imgproc.hpp
-/Users/kieran/git/cv_highlevel/stolorz/opencv-2.4.13/samples/cpp/HarrisCorners/opencv2/imgproc/imgproc.hpp
+/home/other/Desktop/open/cv_highlevel/stolorz/opencv-2.4.13/samples/cpp/HarrisCorners/opencv2/imgproc/imgproc.hpp
 iostream
 -
 stdio.h
@@ -20,6 +20,8 @@ stdlib.h
 vector
 -
 math.h
+-
+string.h
 -
 
 /usr/local/include/opencv2/core/core.hpp

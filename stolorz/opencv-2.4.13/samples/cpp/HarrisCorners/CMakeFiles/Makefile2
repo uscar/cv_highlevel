@@ -38,19 +38,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /usr/local/Cellar/cmake/3.2.2/bin/cmake
+CMAKE_COMMAND = /usr/bin/cmake
 
 # The command to remove a file.
-RM = /usr/local/Cellar/cmake/3.2.2/bin/cmake -E remove -f
+RM = /usr/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/kieran/git/cv_highlevel/stolorz/opencv-2.4.13/samples/cpp/HarrisCorners
+CMAKE_SOURCE_DIR = /home/other/Desktop/open/cv_highlevel/stolorz/opencv-2.4.13/samples/cpp/HarrisCorners
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/kieran/git/cv_highlevel/stolorz/opencv-2.4.13/samples/cpp/HarrisCorners
+CMAKE_BINARY_DIR = /home/other/Desktop/open/cv_highlevel/stolorz/opencv-2.4.13/samples/cpp/HarrisCorners
 
 #=============================================================================
 # Target rules for target CMakeFiles/HarrisCorners.dir
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /Users/kieran/git/cv_highlevel/stolorz/opencv-2.4.13/samples/
 CMakeFiles/HarrisCorners.dir/all:
 	$(MAKE) -f CMakeFiles/HarrisCorners.dir/build.make CMakeFiles/HarrisCorners.dir/depend
 	$(MAKE) -f CMakeFiles/HarrisCorners.dir/build.make CMakeFiles/HarrisCorners.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /Users/kieran/git/cv_highlevel/stolorz/opencv-2.4.13/samples/cpp/HarrisCorners/CMakeFiles  1
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/other/Desktop/open/cv_highlevel/stolorz/opencv-2.4.13/samples/cpp/HarrisCorners/CMakeFiles  1
 	@echo "Built target HarrisCorners"
 .PHONY : CMakeFiles/HarrisCorners.dir/all
 
@@ -69,9 +69,9 @@ all: CMakeFiles/HarrisCorners.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/HarrisCorners.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kieran/git/cv_highlevel/stolorz/opencv-2.4.13/samples/cpp/HarrisCorners/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/other/Desktop/open/cv_highlevel/stolorz/opencv-2.4.13/samples/cpp/HarrisCorners/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/HarrisCorners.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kieran/git/cv_highlevel/stolorz/opencv-2.4.13/samples/cpp/HarrisCorners/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/other/Desktop/open/cv_highlevel/stolorz/opencv-2.4.13/samples/cpp/HarrisCorners/CMakeFiles 0
 .PHONY : CMakeFiles/HarrisCorners.dir/rule
 
 # Convenience name for target.
