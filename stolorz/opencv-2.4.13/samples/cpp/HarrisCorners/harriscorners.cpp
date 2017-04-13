@@ -5,6 +5,7 @@
 #include <stdlib.h>
 #include <vector>
 #include <math.h>
+#include <string.h>
 
 using namespace cv;
 using namespace std;
@@ -14,8 +15,8 @@ Mat src, src_gray;
 int thresh = 100;
 int max_thresh = 255;
 
-char* source_window = "Source image";
-char* corners_window = "Corners detected";
+std::string source_window = "Source image";
+std::string corners_window = "Corners detected";
 
 // Function header
 void cornerHarris_demo( int, void* );
@@ -43,7 +44,7 @@ the true "single" corner between them.
 void avgCorners(vector<Point> v){
   printf("in this thang\n");
   for (int i = 0; i < v.size(); i++){
-    printf("distance from (%d,%d) to (%d,%d) is %f\n", v[i].x, v[i].y, v[i+1].x, v[i+1].y,distance(v[i], v[i+1]));
+    printf("distance from (%d,%d) to (%d,%d) is %f\n", v[i].x, v[i].y, v[i+1].x, v[i+1].y,::distance(v[i], v[i+1]));
   }
 }
 
