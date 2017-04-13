@@ -43,3 +43,8 @@ Makefile
 *.JPEG
 *.JPG
 
+#build folder
+/[B]build
+
+#MAC OS
+.DS_Store
