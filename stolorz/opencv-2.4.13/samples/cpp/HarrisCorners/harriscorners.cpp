@@ -12,8 +12,10 @@ using namespace std;
 
 // Global variables
 Mat src, src_gray;
-int thresh = 100;
+int thresh = 125;
 int max_thresh = 255;
+double tape_width = 1.0f;
+
 
 std::string source_window = "Source image";
 std::string corners_window = "Corners detected";
@@ -27,6 +29,14 @@ double distance(Point p1, Point p2){
   return sqrt((p1.x-p2.x)*(p1.x-p2.x) + (p1.y-p2.y)*(p1.y-p2.y));
 }
 
+struct cluster{
+  vector<Point> points;
+  int numPoints;
+  double x;
+  double y;
+};
+
+vector<cluster> clusters;
 
 //averages the corners in array to one x,y
 
@@ -41,11 +51,92 @@ the true "single" corner between them.
 
 */
 
+double quadAvg(double a, double b, double c, double d){
+  return ((a+b+c+d) / 4.0f);
+}
+
 void avgCorners(vector<Point> v){
-  printf("in this thang\n");
+  //printf("in this thang\n");
+
+  //form clusters
   for (int i = 0; i < v.size(); i++){
-    printf("distance from (%d,%d) to (%d,%d) is %f\n", v[i].x, v[i].y, v[i+1].x, v[i+1].y,::distance(v[i], v[i+1]));
+    cluster toAdd;
+    toAdd.points.push_back(v[i]);
+    if (i != v.size()-1 && distance(v[i], v[i+1]) <= 5 ){
+      toAdd.points.push_back(v[i+1]);
+
+      if(i != v.size()-2){
+        for (int j = i + 2; j < v.size(); j++){
+          if(distance(v[j], v[i]) <= 5){
+            toAdd.points.push_back(v[j]);
+          }
+        }
+      }
+      //else don't need to keep checking
+      
+
+    }
+    toAdd.numPoints = toAdd.points.size();
+    clusters.push_back(toAdd);
+    
   }
+
+  //clusters formed now calculate consensus value
+  for (int i = 0; i < clusters.size(); i++){
+    cluster c = clusters[i]; //just to type less below
+    if (clusters[i].numPoints == 1){
+      clusters[i].x = clusters[i].points[0].x;
+      clusters[i].y = clusters[i].points[0].y;
+    }
+    else if (clusters[i].numPoints == 2){//2 point cluster, determine what kind - share x, share y, or neither
+      if (c.points[0].x == c.points[1].x){ //share x
+        //TODO how to determine if we shift the x to the left or right?
+        clusters[i].x = c.points[0].x - tape_width/2;
+        clusters[i].y = (c.points[0].y + c.points[1].y) / 2;
+
+      }
+      else if (c.points[0].y == c.points[1].y){ // share y
+        clusters[i].x = (c.points[0].x + c.points[1].x)/2;
+        clusters[i].y = c.points[0].y - tape_width/2;
+
+
+      }
+
+      else { //diagonals, avg both
+        clusters[i].x = (c.points[0].x + c.points[1].x)/2;
+        clusters[i].y = (c.points[0].y + c.points[1].y) / 2;
+      }
+
+    }
+    else if (clusters[i].numPoints == 3){
+      //only one possibility, just triangulate w right triangle
+      if(c.points[0].x == c.points[1].x){
+        clusters[i].x = (c.points[1].x + c.points[2].x) / 2;
+        clusters[i].y = (c.points[0].y + c.points[1].y) / 2;
+      }
+      else if(c.points[0].x == c.points[2].x){
+        clusters[i].x = (c.points[1].x + c.points[2].x) / 2;
+        clusters[i].y = (c.points[0].y + c.points[2].y) / 2;
+      }
+      else{
+        clusters[i].x = (c.points[0].x + c.points[2].x) / 2;
+        clusters[i].y = (c.points[1].y + c.points[2].y) / 2;
+      }
+    }
+    else{ //4 point cluster
+      clusters[i].x = quadAvg(c.points[0].x, c.points[1].x, c.points[2].x, c.points[3].x);
+      clusters[i].y = quadAvg(c.points[0].y, c.points[1].y, c.points[2].y, c.points[3].y);
+
+
+    }
+    //TODO, we probably need to handle 5+ close corners or also 0 corners
+
+    printf("cluster[%i].x: %f\n", i, clusters[i].x);
+    printf("cluster[%i].y: %f\n", i, clusters[i].y);
+
+
+  }
+
 }
 
 
