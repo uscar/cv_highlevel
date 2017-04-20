@@ -62,12 +62,12 @@ void avgCorners(vector<Point> v){
   for (int i = 0; i < v.size(); i++){
     cluster toAdd;
     toAdd.points.push_back(v[i]);
-    if (i != v.size()-1 && distance(v[i], v[i+1]) <= 5 ){
+    if (i != v.size()-1 && ::distance(v[i], v[i+1]) <= 5 ){
       toAdd.points.push_back(v[i+1]);
 
       if(i != v.size()-2){
         for (int j = i + 2; j < v.size(); j++){
-          if(distance(v[j], v[i]) <= 5){
+          if(::distance(v[j], v[i]) <= 5){
             toAdd.points.push_back(v[j]);
           }
         }
