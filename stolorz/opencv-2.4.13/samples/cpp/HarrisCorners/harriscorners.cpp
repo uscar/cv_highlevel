@@ -222,6 +222,10 @@ void cornerHarris_demo( int, void* )
   //average the corners into one x,y
   avgCorners(cornerVec);
 
+  for (int k = 0; k < clusters.size(); k++){
+    circle(dst_norm_scaled, Point(clusters[k].x, clusters[k].y), 20, Scalar(206), 2, 8, 0);
+  }
+
   /// Showing the result
   namedWindow( corners_window, CV_WINDOW_AUTOSIZE );
   imshow( corners_window, dst_norm_scaled );
