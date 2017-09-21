@@ -1,5 +1,0 @@
-cmake_minimum_required( VERSION 2.8 )
-project( persTransEx )
-find_package( OpenCV REQUIRED )
-add_executable( persTransEx ../persTrans.cpp )
-target_link_libraries( persTransEx ${OpenCV_LIBS} )
